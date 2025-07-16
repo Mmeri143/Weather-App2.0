@@ -6,7 +6,7 @@ function searchSubmitHandler(event) {
   cityElement.innerHTML = searchInputElement.value; // Update the city element
   searchInputElement.value = searchInputElement.value.trim(); // Trim whitespace
   searchInputElement.value = searchInputElement.value.toLowerCase(); // Convert to lowercase
-  if (searchInputElement.value) {
+  if (searchInputElement.value === "") {
     alert("Please enter a search term.");
     return;
   }
