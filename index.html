@@ -30,18 +30,23 @@
       <main>
         <div class="weather-data">
           <div>
-            <h1 class="weather-city" id="city">Paris</h1>
+            <h1 class="weather-city" id="city"></h1>
             <p class="weather-description">
-              Tuesday 15:49, clear sky
+              Tuesday 15:49, <span id="description">clear sky</span>
               <br />
-              Humidity: <strong class="weather-humidity">25%</strong>, Wind:
-              <strong class="weather-speed">4.12km/h</strong>
+              Humidity:
+              <strong class="weather-humidity"
+                ><span id="humidity"> 25</span>%</strong
+              >, Wind:
+              <strong class="weather-speed"
+                ><span id="wind">4.12</span>km/h</strong
+              >
             </p>
           </div>
         </div>
         <div class="weather-app-temperature-container">
           <div class="weather-icon">☀️</div>
-          <div class="weather-app-temperature">39</div>
+          <div class="weather-app-temperature" id="temperature"></div>
           <div class="weather-app-unit">°C</div>
         </div>
       </main>
