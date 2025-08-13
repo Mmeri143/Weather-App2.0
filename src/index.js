@@ -11,6 +11,7 @@ function displayWeather(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let timeElement = document.querySelector("#time");
+  let iconElement = document.querySelector("#icon");
 
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
   cityElement.innerHTML = response.data.city;
@@ -19,6 +20,7 @@ function displayWeather(response) {
   windElement.innerHTML = response.data.wind.speed;
   let date = new Date(response.data.time * 1000);
   timeElement.innerHTML = formatDate(date);
+  iconElement.innerHTML = `<img src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png" alt="${response.data.condition.description}" />`;
 }
 function formatDate(date) {
   let days = [
